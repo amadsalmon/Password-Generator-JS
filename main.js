@@ -12,8 +12,8 @@ var length = lengthSelector.value;
 const generatedPasswordTextField = document.getElementById("generated-password");
 
 function generateButtonClicked() {
+    length = lengthSelector.value;
     var generatedPassword = generateRandomPassword(length);
-    console.log(generatedPassword);
     generatedPasswordTextField.value = generatedPassword;
 }
 
