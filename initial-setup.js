@@ -1,5 +1,10 @@
+import { generateRandomPassword } from  './generator.js';
+
 // Automatically fill the length selector's options
 fillLengthOptions();
+
+// Automatically generate strong password when page opens
+document.getElementById("generated-password").value = generateRandomPassword(16);
 
 /* This functions fills the length selector's options with values ranging from 1 to 128. */
 function fillLengthOptions() {
