@@ -18,5 +18,10 @@ function generateButtonClicked() {
 }
 
 function copyButtonClicked() {
-    console.log("copyButtonClicked");
+    /* Select the text field */
+    generatedPasswordTextField.select(); 
+    generatedPasswordTextField.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
 }
