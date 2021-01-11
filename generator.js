@@ -1,6 +1,6 @@
 const numbers = "0123456789";
-const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
-const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const lowercases = "abcdefghijklmnopqrstuvwxyz";
+const uppercases = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const symbols = "!@#$%^&*()_+=[]";
 
 // Returns an int, pseudo-random number between 0 (inclusive) and max (exclusive).
@@ -8,41 +8,55 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
   
-// Returns a random lowercase letter character
+// Returns a random lowercase letter character (from the lowercases array)
 function generateRandomLowercaseCharacter() {
-    return lowercaseLetters[getRandomInt(lowercaseLetters.length)];
+    return lowercases[getRandomInt(lowercases.length)];
 }
 
-// Returns a random lowercase letter character
+// Returns a random lowercase letter character (from the uppercases array)
 function generateRandomUppercaseCharacter() {
-    return uppercaseLetters[getRandomInt(uppercaseLetters.length)];
+    return uppercases[getRandomInt(uppercases.length)];
 }
 
+// Returns a random number character (from the symbols array)
 function generateRandomNumberCharacter() {
     return numbers[getRandomInt(numbers.length)];
 }
-  
+
+// Returns a random symbol character (from the symbols array)
 function generateRandomSymbolCharacter() {
     return symbols[getRandomInt(symbols.length)];
 }
 
-function generateRandomCharacter() {
-    switch (getRandomInt(4)) {
-        case 0:
-            return generateRandomLowercaseCharacter();
-        case 1:
-            return generateRandomUppercaseCharacter();
-        case 2:
-            return generateRandomNumberCharacter();
-        case 3:
-            return generateRandomSymbolCharacter();
-    }
+// Returns a random character from the given array array
+function generateRandomCharacterFromArray(array) {
+    return array[getRandomInt(array.length)];
 }
 
-function generateRandomPassword(length) {
+function generateRandomCharacter(usableCharactersArray) {
+    var arrayIndex = getRandomInt(usableCharactersArray.length);
+    return generateRandomCharacterFromArray(usableCharactersArray[arrayIndex]);
+}
+
+function generateRandomPassword(length, includeNumbers, includeUppercaseCharacters, includeLowercaseCharacters, includeSymbols) {
+    var usableCharactersArray = [];
+    if (includeNumbers) {
+        usableCharactersArray.push(numbers);
+    }
+    if (includeUppercaseCharacters) {
+        usableCharactersArray.push(uppercases);
+    }
+    if (includeLowercaseCharacters) {
+        usableCharactersArray.push(lowercases);
+    }
+    if (includeSymbols) {
+        usableCharactersArray.push(symbols);
+    }
+    console.log(length, includeNumbers, includeUppercaseCharacters, includeLowercaseCharacters, includeSymbols);
+    console.log(usableCharactersArray);
     var result = "";
     for (let i = 1; i <= length; i++) {
-        result += generateRandomCharacter();
+        result += generateRandomCharacter(usableCharactersArray);
     }
     return result;
 }

@@ -13,8 +13,17 @@ const generatedPasswordTextField = document.getElementById("generated-password")
 
 function generateButtonClicked() {
     length = lengthSelector.value;
-    var generatedPassword = generateRandomPassword(length);
-    generatedPasswordTextField.value = generatedPassword;
+    var includeNumbers = document.getElementById("include-numbers-checkbox").checked;
+    var includeUppercaseCharacters = document.getElementById("include-uppercase-characters-checkbox").checked;
+    var includeLowercaseCharacters = document.getElementById("include-lowercase-characters-checkbox").checked;
+    var includeSymbols = document.getElementById("include-symbols-checkbox").checked;
+    
+    if (checkValidOptions(includeNumbers, includeUppercaseCharacters, includeLowercaseCharacters, includeSymbols)) {
+        var generatedPassword = generateRandomPassword(length, includeNumbers, includeUppercaseCharacters, includeLowercaseCharacters, includeSymbols);
+        generatedPasswordTextField.value = generatedPassword;
+    } else {
+        alert("You must choose at least one of the options.");
+    }
 }
 
 function copyButtonClicked() {
@@ -24,4 +33,8 @@ function copyButtonClicked() {
 
     /* Copy the text inside the text field */
     document.execCommand("copy");
+}
+
+function checkValidOptions(includeNumbers, includeUppercaseCharacters, includeLowercaseCharacters, includeSymbols) { 
+    return includeNumbers + includeUppercaseCharacters + includeLowercaseCharacters + includeSymbols >= 1;
 }
