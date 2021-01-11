@@ -28,9 +28,29 @@ select {
     padding: 2px 5px;
 }
 
+.single-option-container label span {
+    font-style: italic;
+}
+
 /* ################ *
         Result
  * ################ */
+#buttons-container {
+    display: flex;
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+.button {
+    padding: 10px 15px;
+    margin: 10px 15px;
+    background-color: brown;
+}
+
+
 #generated-password {
+    border: 1px black solid;
+    width: 50%;
+    text-align: center;
     font-family: 'Roboto Mono', monospace;
 }
