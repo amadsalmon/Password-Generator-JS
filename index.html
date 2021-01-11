@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="site-global.css">
     <title>Password Generator</title>
     <meta name="description"
         content="A password generator to help you choose strong passwords and improve the security of your accounts." />
@@ -12,11 +13,35 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Roboto+Mono&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
+    <nav class="topnav">
+        <div id="topnav-AmadSalmon" class="notSelectable">
+            <a href="https://amadsalmon.github.io/#">Amad Salmon</a>
+        </div>
+        <ul class="topnav-items notSelectable">
+            <li>
+                <a class="active" href="https://amadsalmon.github.io/#">Home</a>
+            </li>
+            <li>
+                <a href="https://amadsalmon.github.io/#about">About me</a>
+            </li>
+            <li>
+                <a href="https://amadsalmon.github.io/#projects">Projects</a>
+            </li>
+            <li>
+                <a href="https://amadsalmon.github.io/#contact">Contact</a>
+            </li>
+        </ul>
+        <div id="toggleMenuButton" class="toggleMenuButton notSelectable">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
     <div id="main-container">
         <h1>Password Generator</h1>
         <p>A password generator to help you choose strong passwords and improve the security of your accounts.</p>
@@ -61,6 +86,43 @@
         <a href="" target="_blank" id="good-practices">Good password practices</a>
         <p><i>In development: How good is my password?</i></p>
     </div>
+
+
+    <footer>
+        <span>Amad Salmon</span>
+        <ul>
+            <li>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/amadsalmon/" target="_blank">
+                    <img src="https://icongr.am/devicon/linkedin-plain.svg?size=128&color=000000" alt="LinkedIn" />
+                </a>
+            </li>
+            <li>
+                <!-- GitHub -->
+                <a href="https://www.github.com/amadsalmon/" target="_blank">
+                    <img src="https://icongr.am/devicon/github-original.svg?size=128&color=000000" alt="GitHub" />
+                </a>
+            </li>
+            <li>
+                <!-- Behance -->
+                <a href="https://www.behance.net/amadsalmon" target="_blank">
+                    <img src="https://icongr.am/entypo/behance.svg?size=128&color=000000" alt="Behance" />
+                </a>
+            </li>
+            <li>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/amadsalmon/" target="_blank">
+                    <img src="https://icongr.am/entypo/instagram.svg?size=128&color=000000" alt="Instagram" />
+                </a>
+            </li>
+            <li>
+                <!-- Twitter -->
+                <a href="https://www.twitter.com/amadsalmon/" target="_blank">
+                    <img src="https://icongr.am/entypo/twitter.svg?size=128&color=000000" alt="Twitter" />
+                </a>
+            </li>
+        </ul>
+    </footer>
 
     <script type="module" src="initial-setup.js"></script>
     <script type="module" src="main.js"></script>

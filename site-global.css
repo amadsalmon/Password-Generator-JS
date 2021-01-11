@@ -1,0 +1,264 @@
+/* ======================
+		GENERAL
+====================== */
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    padding-left: 2vh;
+}
+
+a {
+    color: black;
+}
+
+.notSelectable {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+
+
+/* ======================
+	TOP NAVIGATION BAR
+====================== */
+
+/* Style the top navigation */
+.topnav {
+    background-color: white;
+    font-size: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    min-height: 7vh;
+    width: 100%;
+    z-index: 100;
+    padding-left: 2vh;
+}
+
+#topnav-AmadSalmon {
+    font-size: 1rem;
+    margin-right: 5vh;
+    float: left;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+#topnav-AmadSalmon a {
+    text-decoration: none;
+}
+
+.topnav-items {
+    text-transform: uppercase;
+
+    margin-right: 5vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.topnav-items ul {
+    background-color: beige;
+}
+
+.topnav-items li {
+    list-style: none;
+}
+
+.topnav-items a {
+    text-align: center;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+/* Add a color to the active/current link */
+.topnav-items a.active {
+    color: black;
+    border-bottom: black 1px solid;
+}
+
+.topnav-items a::after,
+.topnav-items a::before {
+    content: "";
+    position: absolute;
+    bottom: -0.5px;
+    width: 0px;
+    height: 1px;
+    margin: 0px 0 0;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    opacity: 0;
+    background-color: black;
+}
+
+.topnav-items a::after {
+    right: 50%;
+}
+
+.topnav-items a::before {
+    left: 50%;
+}
+
+.topnav-items a:not(.active):hover::after {
+    width: 50%;
+    opacity: 1;
+}
+
+.topnav-items a:not(.active):hover::before {
+    width: 50%;
+    opacity: 1;
+}
+
+
+/*  *****
+ * Three-bar menu button
+ * ******/
+.toggleMenuButton {
+    display: none;
+    cursor: pointer;
+    margin-right: 6vh;
+}
+
+.toggleMenuButton span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: black;
+    border-radius: 3px;
+
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+.active.toggleMenuButton span:nth-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-3px, 6px);
+}
+
+.active.toggleMenuButton span:nth-child(2) {
+    transform-origin: 0% 100%;
+    opacity: 0;
+}
+
+.active.toggleMenuButton span:nth-child(3) {
+    -webkit-transform: rotate(45deg) translate(-8px, -10px);
+    transform: rotate(45deg) translate(-8px, -10px);
+}
+
+
+
+@media screen and (max-width : 770px) {
+    .h1 {
+        margin-top: 7vh;
+    }
+
+    #headline {
+        margin-top: 10vh;
+        padding-top: 1.5vh;
+    }
+
+    #topnav-AmadSalmon {
+        font-size: 1.4rem;
+    }
+
+    .topnav-items {
+        border-top: black 2px solid;
+        background-color: white;
+        position: absolute;
+        right: 0px;
+        width: 50%;
+        height: 30vh;
+        top: 5vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        transform: translateX(110%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .topnav-items.active {
+        transform: translateX(0%);
+    }
+
+    .toggleMenuButton {
+        display: inline-block;
+        float: right
+    }
+
+}
+
+
+
+
+
+/* ======================
+		Footer
+====================== */
+
+footer {
+    border-top: black 1px solid;
+    width: 65%;
+    height: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    ;
+}
+
+footer span {
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer img {
+    height: 30px;
+    width: 30px;
+}
