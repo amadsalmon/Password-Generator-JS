@@ -52,8 +52,7 @@ function generateRandomPassword(length, includeNumbers, includeUppercaseCharacte
     if (includeSymbols) {
         usableCharactersArray.push(symbols);
     }
-    console.log(length, includeNumbers, includeUppercaseCharacters, includeLowercaseCharacters, includeSymbols);
-    console.log(usableCharactersArray);
+
     var result = "";
     for (let i = 1; i <= length; i++) {
         result += generateRandomCharacter(usableCharactersArray);
