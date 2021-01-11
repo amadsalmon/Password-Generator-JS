@@ -24,6 +24,10 @@ body {
         Header
  * ################ */
 
+h1 {
+    text-align: center;
+}
+
 h1~p {
     width: 50%;
     text-align: center;
@@ -35,7 +39,7 @@ h1~p {
  * ################ */
 
 select {
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding: 2px 5px;
 }
 
@@ -55,7 +59,8 @@ select {
 .button {
     padding: 10px 15px;
     margin: 10px 15px;
-    background-color: brown;
+    background-color: rgb(124, 124, 124);
+    border-radius: 5%;
 }
 
 
