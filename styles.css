@@ -1,0 +1,8 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 5vh;
+}
+
+#generated-password {
+    font-family: 'Roboto Mono', monospace;
+}

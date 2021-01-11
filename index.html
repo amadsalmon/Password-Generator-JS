@@ -10,10 +10,48 @@
         content="A password generator to help you choose strong passwords and improve the security of your accounts." />
     <meta name="keywords" content="password generator, strong password, passwords" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <h1>Password Generator</h1>
+
+    <h2>Options:</h2>
+    <div class="all-options-container">
+        <div class="single-option-container">
+            <label class="option-description">Length</label>
+            <input type="range" min="1" max="128" value="16" class="slider" id="passwordLengthSlider">
+            <span id="passwordLengthSliderValue">16</span>
+        </div>
+        <div class="single-option-container">
+            <input type="checkbox" id="include-numbers-checkbox" name="include-numbers" value="include-numbers">
+            <label class="option-description" for="include-numbers">Numbers <span class="option-example">(e.g.
+                    01234)</span></label>
+        </div>
+        <div class="single-option-container">
+            <input type="checkbox" id="include-uppercase-characters-checkbox" name="include-uppercase-characters"
+                value="include-uppercase-characters">
+            <label class="option-description" for="include-uppercase-characters">Uppercase characters <span
+                    class="option-example">(e.g. ABCDE)</span></label>
+        </div>
+        <div class="single-option-container">
+            <input type="checkbox" id="include-lowercase-characters-checkbox" name="include-lowercase-characters"
+                value="include-lowercase-characters">
+            <label class="option-description" for="include-lowercase-characters">Lowercase characters <span
+                    class="option-example">(e.g. abcde)</span></label>
+        </div>
+        <div class="single-option-container">
+            <input type="checkbox" id="include-symbols-checkbox" name="include-symbols" value="include-symbols">
+            <label class="option-description" for="include-symbols">Symbols <span class="option-example">(e.g.
+                    $-!_@)</span></label>
+        </div>
+    </div>
+    <h2>Generated password :</h2>
+    <div id="generated-password">AZ-s2iA3czN!trO</div>
+    <button>Generate</button><button>Copy</button>
 
     <script src="script.js"></script>
 </body>
