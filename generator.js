@@ -3,22 +3,28 @@ const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
 const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const symbols = "!@#$%^&*()_+=[]";
 
+// Returns an int, pseudo-random number between 0 (inclusive) and max (exclusive).
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+}
+  
 // Returns a random lowercase letter character
 function generateRandomUppercaseCharacter() {
-    return lowercaseLetters[Math.floor(Math.random() * lowercaseLetters.length)];
+    return lowercaseLetters[getRandomInt(lowercaseLetters.length)];
 }
 
 // Returns a random lowercase letter character
 function generateRandomUppercaseCharacter() {
-    return uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)];
+    return uppercaseLetters[getRandomInt(uppercaseLetters.length)];
 }
 
 function generateRandomNumberCharacter() {
-    return numbers[Math.floor(Math.random() * numbers.length)];
+    return numbers[getRandomInt(numbers.length)];
 }
   
 function generateRandomSymbolCharacter() {
-    return symbols[Math.floor(Math.random() * symbols.length)];
+    return symbols[getRandomInt(symbols.length)];
+}
 }
 
 function generateRandomPassword(length) {
