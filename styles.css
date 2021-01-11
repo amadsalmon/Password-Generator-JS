@@ -1,8 +1,25 @@
+/* ################ *
+        General
+ * ################ */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin-left: 5vh;
 }
 
+
+/* ################ *
+        Options
+ * ################ */
+
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+}
+
+/* ################ *
+        Result
+ * ################ */
 #generated-password {
     font-family: 'Roboto Mono', monospace;
 }
