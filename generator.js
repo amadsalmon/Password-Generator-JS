@@ -9,7 +9,7 @@ function getRandomInt(max) {
 }
   
 // Returns a random lowercase letter character
-function generateRandomUppercaseCharacter() {
+function generateRandomLowercaseCharacter() {
     return lowercaseLetters[getRandomInt(lowercaseLetters.length)];
 }
 
@@ -25,12 +25,24 @@ function generateRandomNumberCharacter() {
 function generateRandomSymbolCharacter() {
     return symbols[getRandomInt(symbols.length)];
 }
+
+function generateRandomCharacter() {
+    switch (getRandomInt(4)) {
+        case 0:
+            return generateRandomLowercaseCharacter();
+        case 1:
+            return generateRandomUppercaseCharacter();
+        case 2:
+            return generateRandomNumberCharacter();
+        case 3:
+            return generateRandomSymbolCharacter();
+    }
 }
 
 function generateRandomPassword(length) {
     var result = "";
     for (let i = 1; i <= length; i++) {
-        result += generateRandomUppercaseCharacter();
+        result += generateRandomCharacter();
     }
     return result;
 }
