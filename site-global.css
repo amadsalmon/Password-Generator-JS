@@ -6,12 +6,14 @@ html {
     font-size: 18px;
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 body {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 p {
@@ -200,12 +202,12 @@ a {
         position: absolute;
         right: 0px;
         width: 50%;
-        height: 30vh;
+        height: 40%;
         top: 5vh;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        transform: translateX(110%);
+        transform: translateX(120%);
         transition: transform 0.3s ease-in;
     }
 
