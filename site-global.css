@@ -59,8 +59,10 @@ a {
     width: 100%;
     z-index: 100;
     padding-left: 2vh;
-    position: fixed;  /* Set the navbar to fixed position */
-    top: 0;  /* Position the navbar at the top of the page */
+    position: fixed;
+    /* Set the navbar to fixed position */
+    top: 0;
+    /* Position the navbar at the top of the page */
 }
 
 #topnav-AmadSalmon {
@@ -201,14 +203,18 @@ a {
         background-color: white;
         position: absolute;
         right: 0px;
-        width: 50%;
-        height: 40%;
+        width: 100%;
+        height: 100vh;
         top: 5vh;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        transform: translateX(120%);
+        justify-content: flex-start;
+        align-items: center;
+        transform: translateX(100%);
         transition: transform 0.3s ease-in;
+
+        padding-top: 3vh;
+        margin-right: 0vh;
     }
 
     .topnav-items.active {
@@ -218,6 +224,10 @@ a {
     .toggleMenuButton {
         display: inline-block;
         float: right
+    }
+
+    .topnav-items li {
+        margin-bottom: 6vh;
     }
 
 }
